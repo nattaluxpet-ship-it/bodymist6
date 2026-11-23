@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>รายการสั่งซื้อ | Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+    }
+
+    #ordersTable {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+    }
+
+    #ordersTable th,
+    #ordersTable td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    #ordersTable th {
+      background: var(--cream);
+      font-weight: 500;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    #ordersTable th.num,
+    #ordersTable td.num {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    #ordersTable td.num {
+      color: var(--accent-deep);
+    }
+
+    #ordersTable td.time {
+      white-space: nowrap;
+      color: var(--ink-soft);
+    }
+
+    #ordersTable tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    #ordersTable tbody tr:hover td {
+      background: var(--cream);
+    }
+
+    .admin-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+    }
+
+    .admin-bar p {
+      margin: 0;
+    }
+
+    .admin-bar .btn {
+      padding: 0.6rem 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <ul class="nav">
+        <li><a href="product.html">สินค้า</a></li>
+        <li><a href="admin.html" aria-current="page">รายการสั่งซื้อ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1 style="font-size: var(--text-2xl);">รายการสั่งซื้อ</h1>
+          <div class="title-mark"><i></i></div>
+        </div>
+
+        <div class="admin-bar">
+          <p class="text-muted" id="status">กำลังโหลดข้อมูล...</p>
+          <button type="button" class="btn" id="reload-btn">โหลดใหม่</button>
+        </div>
+
+        <div class="table-wrap">
+          <table id="ordersTable">
+            <thead>
+              <tr>
+                <th>วันเวลา</th>
+                <th>ชื่อลูกค้า</th>
+                <th>เบอร์โทร/Line</th>
+                <th>รายการสินค้า</th>
+                <th class="num">จำนวนเงินรวม</th>
+                <th>หมายเหตุ</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

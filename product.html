@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สินค้า | Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <ul class="nav">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="product.html" aria-current="page">สินค้า</a></li>
+        <li><a href="order.html">สั่งซื้อ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1 style="font-size: var(--text-2xl);">เลือกกลิ่นที่ใช่สำหรับคุณ</h1>
+          <div class="title-mark"><i></i></div>
+        </div>
+
+        <ul class="filter" id="filter-bar" aria-label="กรองสินค้าตาม mood">
+          <li><button type="button" data-filter="all" aria-pressed="true">ทั้งหมด</button></li>
+          <li><button type="button" data-filter="fresh" data-mood="fresh" aria-pressed="false">Fresh</button></li>
+          <li><button type="button" data-filter="sweet" data-mood="sweet" aria-pressed="false">Sweet</button></li>
+          <li><button type="button" data-filter="confident" data-mood="confident" aria-pressed="false">Confident</button></li>
+          <li><button type="button" data-filter="romance" data-mood="romance" aria-pressed="false">Romance</button></li>
+        </ul>
+
+        <div class="product-grid" id="product-list" aria-live="polite"></div>
+        <p class="text-center text-muted" id="empty-message" hidden></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <p class="mb-0">&copy; Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
